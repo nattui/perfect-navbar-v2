@@ -55,15 +55,6 @@
     transition: box-shadow 200ms;
   }
 
-  @supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
-    .subnavbar,
-    &__main {
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
-      background-color: #ffffffbf;
-    }
-  }
-
   &__wrapper {
     // @include debug(blue);
     @include center-vertical;
@@ -220,6 +211,16 @@
     @include transition-button-secondary($np-red-1);
     background-color: lighten($np-primary, 32%);
     color: $np-primary;
+  }
+}
+
+// Blur
+@supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
+  .navbar__main,
+  .subnavbar {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: #ffffffbf;
   }
 }
 
