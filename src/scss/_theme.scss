@@ -1,0 +1,91 @@
+// ------------------------------------------------------ /
+// Theme
+// ------------------------------------------------------ /
+
+// Imports ---------------------------------------------- /
+@import "font";
+
+// Base ------------------------------------------------- /
+// Default border box
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// Default height
+html,
+body {
+  height: 100%;
+}
+
+// Default text
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+// Default font
+body {
+  font-family: Jost, -apple-system, sans-serif;
+}
+
+// Default anchor
+a {
+  color: black;
+}
+
+// Button ----------------------------------------------- /
+// Disable button selection
+button {
+  user-select: none;
+}
+
+// Disable button border
+button::-moz-focus-inner {
+  border: 0;
+}
+
+// Scroll ----------------------------------------------- /
+// Enabled smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+// Highlight -------------------------------------------- /
+// Disable tap highlight
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Selection -------------------------------------------- /
+// Change selection color
+::selection {
+  background-color: #ffdeebcc;
+}
+
+::-moz-selection {
+  background-color: #ffdeeba0;
+}

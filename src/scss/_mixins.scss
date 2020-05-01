@@ -1,0 +1,109 @@
+// ------------------------------------------------------ /
+// Mixins
+// ------------------------------------------------------ /
+
+// Imports ---------------------------------------------- /
+@import "colors";
+
+// Base ------------------------------------------------- /
+@mixin debug($color: #ff0000) {
+  background-color: rgba($color, 0.1);
+  border: 1px dashed rgba($color, 0.5);
+}
+
+@mixin full {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin position-absolute-bottom($distance) {
+  position: absolute;
+  bottom: $distance;
+}
+
+@mixin transition($property) {
+  transition: $property 0.2s;
+}
+
+@mixin transition-background {
+  outline: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $np-gray-2;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $np-gray-3;
+  }
+}
+
+@mixin transition-anchor($color) {
+  box-shadow: inset 0px -1px $color;
+  transition: box-shadow 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: inset 0px -8px $color;
+  }
+}
+
+@mixin transition-button-primary($color) {
+  outline: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: darken($color, 8%);
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken($color, 16%);
+  }
+}
+
+@mixin transition-button-secondary($color) {
+  outline: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: lighten($np-primary, 30%);
+  }
+
+  &:active,
+  &:focus {
+    background-color: lighten($np-primary, 28%);
+  }
+}
+
+@mixin np-a($textColor: $np-gray-7, $lineColor: $np-primary) {
+  box-shadow: inset 0px -1px rgba($lineColor, 0.32);
+  color: $textColor;
+  outline: none;
+  text-decoration: none;
+  transition: box-shadow 200ms;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: inset 0px -8px rgba($lineColor, 0.32);
+  }
+}

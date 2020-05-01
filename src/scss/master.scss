@@ -1,0 +1,26 @@
+// ------------------------------------------------------ /
+// Master
+// ------------------------------------------------------ /
+
+// Imports ---------------------------------------------- /
+@import "theme";
+@import "mixins";
+@import "colors";
+
+// Base ------------------------------------------------- /
+body {
+  height: 1400px;
+}
+
+.main {
+  // @include debug;
+  padding: 16px;
+  // margin: 16px;
+}
+
+.colorBlock {
+  @include debug(black);
+  margin-top: 16px;
+  padding: 16px 0 16px 32px;
+  overflow-x: hidden;
+}

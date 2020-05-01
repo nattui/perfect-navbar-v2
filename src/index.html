@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfect Navbar v2</title>
+  <link rel="shortcut icon" href="resources/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="scss/master.scss">
+  <link rel="stylesheet" href="scss/navbar.scss">
+  <script defer src="js/navbar.js"></script>
+</head>
+
+<body>
+  <header class="navbar navbar--fixed">
+    <!-- <header class="navbar navbar"> -->
+    <!-- Navbar Banner -->
+    <div class="navbar__banner">
+      <span class="navbar__blurb">Pre-alpha:
+        <a href="#">Learn more about what we're building!</a>
+      </span>
+    </div>
+
+    <!-- Navbar Main -->
+    <div class="navbar__main">
+      <div class="navbar__wrapper">
+        <div class="navbar__brand">
+          <a class="navbar__logo" href="#">
+            <img class="navbar__logomark" src="resources/images/logomark.svg" alt="NPath Logomark">
+            <img class="navbar__logotype" src="resources/images/logotype.svg" alt="NPath Logotype">
+          </a>
+        </div>
+        <nav class="navbar__links">
+          <a class="navbar__link" href="#">Features</a>
+          <!-- <a class="navbar__link" href="#">Pricing</a> -->
+          <a class="navbar__link" href="#">Customers</a>
+          <a class="navbar__link" href="#">Resources</a>
+          <a class="navbar__button navbar__login" href="#">Log&nbsp;in</a>
+          <a class="navbar__button navbar__signup" href="#">Sign&nbsp;up</a>
+          <button class="navbar__search">
+            <img src="resources/images/icons/search.svg" alt="Search Icon" draggable="false">
+          </button>
+          <button class="navbar__menu hamburger hamburger--collapse">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Subnavbar -->
+    <div class="subnavbar">
+      <div class="subnavbar__container">
+        <!-- Navbar Search -->
+        <div class="search">
+          <img class="search__icon" src="resources/images/icons/search.svg" alt="Search Icon" draggable="false">
+          <input class="search__input" type="text" placeholder="Search">
+        </div>
+        <a class="subnavbar__link" href="#">Features</a>
+        <a class="subnavbar__link" href="#">Upgrade</a>
+        <a class="subnavbar__link" href="#">Customers</a>
+        <a class="subnavbar__link" href="#">Resources</a>
+        <a class="subnavbar__link" href="#">Support</a>
+        <a class="subnavbar__button subnavbar__signup" href="#">Sign&nbsp;up</a>
+        <a class="subnavbar__button subnavbar__login" href="#">Log&nbsp;in</a>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="main">
+    <h1>h1 element</h1>
+    <p>p element</p>
+    <a href="#">a element</a>
+    <div class="colorBlock">
+      <ol>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+      </ol>
+    </div>
+    <div class="colorBlock">
+      <ul>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+        <li>element</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
