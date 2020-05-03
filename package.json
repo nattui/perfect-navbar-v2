@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "parcel build src/index.html -d dist/production/ --global index --no-source-maps --public-url ./",
+    "build": "rimraf dist/production/ && parcel build src/index.html -d dist/production/ --global index --no-source-maps --public-url ./",
     "dev": "parcel src/index.html -d dist/development/ --global index --open",
     "package:delete": "rimraf node_modules/ && rimraf package-lock.json",
     "package:update": "npx npm-check-updates -u",
