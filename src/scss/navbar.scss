@@ -31,14 +31,14 @@
     padding: 4px 16px;
     width: 100%;
 
-    & > span {
+    & > p {
       color: #ffffff;
       font-size: 14px;
       line-height: 2;
-    }
 
-    & > a {
-      @include np-a(#ffffff, #ffffff);
+      & > a {
+        @include np-a(#ffffff, #ffffff);
+      }
     }
   }
 
@@ -173,7 +173,7 @@
 
   &__wrapper {
     // margin: 0 16px;
-    width: 1024px;
+    width: calc(1024px + 32px);
   }
 
   &__link {
