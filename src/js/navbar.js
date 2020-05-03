@@ -43,6 +43,7 @@ const setSubnavbar = enabled => {
 
     subnavbar.style.top = '100%';
     navbarMain.removeAttribute('style')
+    navbar.style.touchAction = 'none';
 
 
   } else {
@@ -55,6 +56,7 @@ const setSubnavbar = enabled => {
     window.pageYOffset > 8 ?
       navbarMain.style.boxShadow = '0 0 1px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04)' :
       navbarMain.style.boxShadow = 'none';
+    navbar.removeAttribute('style');
 
   }
   isMenuActive = !isMenuActive;
