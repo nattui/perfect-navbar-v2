@@ -32,6 +32,7 @@
     font-size: 14px;
     padding: 8px 16px;
     width: 100%;
+    z-index: 300;
 
     & > p {
       color: #ffffff;
@@ -54,6 +55,7 @@
     user-select: none;
     width: 100%;
     transition: box-shadow 200ms;
+    z-index: 100;
   }
 
   &__wrapper {
@@ -166,15 +168,13 @@
 .subnavbar {
   // @include debug;
   @include center-horizontal;
+  @include position-absolute-top(-100vh);
   background-color: #ffffff;
   border-top: 1px solid $np-gray-2;
   height: 100vh;
+  transition: top 200ms;
   user-select: none;
   width: 100%;
-
-  @include position-absolute-top(-100vh);
-  transition: top 200ms;
-  z-index: -100;
 
   &__wrapper {
     // @include debug(blue);
