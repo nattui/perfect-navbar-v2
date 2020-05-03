@@ -4,13 +4,15 @@
     "build": "parcel build src/index.html -d dist/production/ --global index --no-source-maps --public-url ./",
     "dev": "parcel src/index.html -d dist/development/ --global index --open",
     "package:delete": "rimraf node_modules/ && rimraf package-lock.json",
-    "package:update": "npx npm-check-updates -u"
+    "package:update": "npx npm-check-updates -u",
+    "start": "npm run dev"
   },
   "dependencies": {
     "hamburgers": "^1.1.3"
   },
   "devDependencies": {
     "parcel-bundler": "latest",
+    "parcel-plugin-inliner": "latest",
     "rimraf": "latest",
     "sass": "latest"
   }
