@@ -41,9 +41,7 @@ const setSubnavbar = enabled => {
     // Hide body scrollbar
     body.style.overflowY = 'hidden';
 
-
     subnavbar.style.top = '100%';
-    navbarMain.style.backgroundColor = '#ffffff';
     navbarMain.style.boxShadow = null;
 
     // subnavbarWrapper.style.height = `calc(100vh - ${navbar.offsetHeight}px)`;
@@ -58,7 +56,6 @@ const setSubnavbar = enabled => {
     body.style.overflowY = 'initial';
 
     subnavbar.style.top = `-100vh`;
-    navbarMain.style.backgroundColor = null;
     window.pageYOffset > 8 ?
       navbarMain.style.boxShadow = '0 0 1px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04)' :
       navbarMain.style.boxShadow = 'none';
