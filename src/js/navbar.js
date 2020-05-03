@@ -1,7 +1,5 @@
 console.log('navbar.js is loaded...');
 
-// TODO: focus input
-
 // Checking whether to add margin top to body
 const navbarFixed = document.getElementsByClassName('navbar--fixed')[0];
 const navbarBanner = document.getElementsByClassName('navbar__banner')[0];
@@ -29,7 +27,6 @@ const menuClass = menu.getAttribute('class');
 const searchInput = document.getElementsByClassName('search__input')[0];
 const subnavbar = document.getElementsByClassName('subnavbar')[0];
 const subnavbarWrapper = document.getElementsByClassName('subnavbar__wrapper')[0];
-// subnavbarWrapper.style.height = `calc(100vh - ${navbar.offsetHeight}px)`;
 // something(true);
 
 let isMenuActive = false;
@@ -43,7 +40,6 @@ const setSubnavbar = enabled => {
 
     subnavbar.style.top = '100%';
     navbarMain.removeAttribute('style')
-
   } else {
     // Set menu icon to default state
     menu.setAttribute('class', menuClass);
