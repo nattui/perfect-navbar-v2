@@ -29,28 +29,37 @@ const menuClass = menu.getAttribute('class');
 const searchInput = document.getElementsByClassName('search__input')[0];
 searchInput.disabled = true;
 const subnavbar = document.getElementsByClassName('subnavbar')[0];
-const subnavbarContainer = document.getElementsByClassName('subnavbar__wrapper')[0];
-something(true);
+const subnavbarWrapper = document.getElementsByClassName('subnavbar__wrapper')[0];
+// subnavbarWrapper.style.height = `calc(100vh - ${navbar.offsetHeight}px)`;
+// something(true);
 
 let isMenuActive = false;
 const setSubnavbar = enabled => {
   // window.scrollTo(0, 0);
   if (enabled) {
+    // Set menu icon to active
     menu.setAttribute('class', `${menuClass} is-active`);
+    // Hide body scrollbar
     body.style.overflowY = 'hidden';
-    subnavbar.style.height = `100vh`;
-    subnavbarContainer.style.height = `calc(100vh - ${navbar.offsetHeight}px)`;
-    subnavbarContainer.style.overflowY = 'auto';
-    searchInput.disabled = false;
+
+
+    subnavbar.style.top = `100%`;
+    // subnavbarWrapper.style.height = `calc(100vh - ${navbar.offsetHeight}px)`;
+    // subnavbarWrapper.style.overflowY = 'auto';
+    // searchInput.disabled = false;
     // searchInput.focus();
-    something(false);
+    // something(false);
   } else {
+    // Set menu icon to default state
     menu.setAttribute('class', menuClass);
+    // Set body scrollbar to initial state
     body.style.overflowY = 'initial';
-    subnavbar.style.height = 0;
+
+    subnavbar.style.top = `-100vh`;
+    // subnavbar.style.height = 0;
     // subnavbar.style.overflowY = 'hidden';
-    searchInput.disabled = true;
-    something(true);
+    // searchInput.disabled = true;
+    // something(true);
   }
   isMenuActive = !isMenuActive;
 }

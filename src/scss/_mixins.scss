@@ -32,6 +32,11 @@
   align-items: center;
 }
 
+@mixin position-absolute-top($distance) {
+  position: absolute;
+  top: $distance;
+}
+
 @mixin position-absolute-bottom($distance) {
   position: absolute;
   bottom: $distance;

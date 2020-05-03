@@ -15,6 +15,7 @@
   @include center-vertical;
   flex-direction: column;
   touch-action: manipulation; // Safari iOS double tap zoom
+  z-index: 100;
 
   &--fixed {
     position: fixed;
@@ -166,15 +167,20 @@
   // @include debug;
   @include center-horizontal;
   background-color: #ffffff;
-  height: 0;
-  overflow-y: hidden;
-  transition: height 200ms;
+  height: 100vh;
   user-select: none;
   width: 100%;
 
+  @include position-absolute-top(-100vh);
+  transition: top 200ms;
+  z-index: -100;
+
   &__wrapper {
-    // margin: 0 16px;
-    width: calc(1024px + 32px);
+    // @include debug(blue);
+    height: calc(100% - 108px);
+    max-width: calc(1024px + 32px);
+    overflow-y: auto;
+    width: 100%;
   }
 
   &__link {
