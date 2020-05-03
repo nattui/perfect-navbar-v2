@@ -42,28 +42,20 @@ const setSubnavbar = enabled => {
     body.style.overflowY = 'hidden';
 
     subnavbar.style.top = '100%';
-    navbarMain.style.boxShadow = null;
+    navbarMain.removeAttribute('style')
 
-    // subnavbarWrapper.style.height = `calc(100vh - ${navbar.offsetHeight}px)`;
-    // subnavbarWrapper.style.overflowY = 'auto';
-    // searchInput.disabled = false;
-    // searchInput.focus();
-    // something(false);
+
   } else {
     // Set menu icon to default state
     menu.setAttribute('class', menuClass);
     // Set body scrollbar to initial state
-    body.style.overflowY = 'initial';
+    body.style.overflowY = null;
 
     subnavbar.style.top = `-100vh`;
     window.pageYOffset > 8 ?
       navbarMain.style.boxShadow = '0 0 1px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04)' :
       navbarMain.style.boxShadow = 'none';
-    // navbarMain.style = '';
-    // subnavbar.style.height = 0;
-    // subnavbar.style.overflowY = 'hidden';
-    // searchInput.disabled = true;
-    // something(true);
+
   }
   isMenuActive = !isMenuActive;
 }
