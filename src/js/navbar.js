@@ -34,7 +34,7 @@ something(true);
 
 let isMenuActive = false;
 const setSubnavbar = enabled => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
   if (enabled) {
     menu.setAttribute('class', `${menuClass} is-active`);
     body.style.overflowY = 'hidden';
