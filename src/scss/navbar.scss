@@ -28,15 +28,14 @@
     background-image: linear-gradient(to right, #fd4974, #f84977, #f2497b, #ec497d, #e64980);
     color: #ffffff;
     font-size: 14px;
-    // height: 44px;
-    padding: 8px 16px;
+    padding: 4px 16px;
     width: 100%;
-  }
 
-  &__blurb {
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 2;
+    & > span {
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 2;
+    }
 
     & > a {
       @include np-a(#ffffff, #ffffff);
