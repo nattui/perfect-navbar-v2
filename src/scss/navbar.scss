@@ -163,6 +163,7 @@
 // Subnavbar -------------------------------------------- /
 .subnavbar {
   // @include debug;
+  @include center-horizontal;
   background-color: #ffffff;
   height: 0;
   overflow-y: hidden;
@@ -170,8 +171,10 @@
   user-select: none;
   width: 100%;
 
-  // &__container {
-  // }
+  &__wrapper {
+    // margin: 0 16px;
+    width: 1024px;
+  }
 
   &__link {
     color: $np-gray-7;

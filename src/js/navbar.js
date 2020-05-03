@@ -29,7 +29,7 @@ const menuClass = menu.getAttribute('class');
 const searchInput = document.getElementsByClassName('search__input')[0];
 searchInput.disabled = true;
 const subnavbar = document.getElementsByClassName('subnavbar')[0];
-const subnavbarContainer = document.getElementsByClassName('subnavbar__container')[0];
+const subnavbarContainer = document.getElementsByClassName('subnavbar__wrapper')[0];
 something(true);
 
 let isMenuActive = false;

@@ -16,6 +16,10 @@ body {
   // @include debug;
   padding: 16px;
   // margin: 16px;
+
+  & > a {
+    @include np-a(#000000, #000000);
+  }
 }
 
 .colorBlock {
