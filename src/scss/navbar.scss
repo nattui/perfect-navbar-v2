@@ -149,6 +149,10 @@
     margin-right: 8px;
     padding: 0;
     width: 40px;
+
+    & > img {
+      -webkit-user-drag: none; // Safari iOS ghost image
+    }
   }
 
   &__menu {
