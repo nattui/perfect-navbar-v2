@@ -27,7 +27,6 @@ const navbar = document.getElementsByClassName('navbar')[0];
 const menu = document.getElementsByClassName('navbar__menu')[0];
 const menuClass = menu.getAttribute('class');
 const searchInput = document.getElementsByClassName('search__input')[0];
-searchInput.disabled = true;
 const subnavbar = document.getElementsByClassName('subnavbar')[0];
 const subnavbarWrapper = document.getElementsByClassName('subnavbar__wrapper')[0];
 // subnavbarWrapper.style.height = `calc(100vh - ${navbar.offsetHeight}px)`;
