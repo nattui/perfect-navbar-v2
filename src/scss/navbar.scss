@@ -47,7 +47,6 @@
   &__main {
     // @include debug(blue);
     @include center;
-    -webkit-touch-callout: none; // Safari iOS: Disable highlight
     background-color: #ffffff;
     height: 64px;
     overflow-x: hidden;
