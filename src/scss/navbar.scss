@@ -164,6 +164,13 @@
   }
 }
 
+.state--disableScroll {
+  -webkit-overflow-scrolling: auto;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
 // Subnavbar -------------------------------------------- /
 .subnavbar {
   // @include debug;
