@@ -164,6 +164,12 @@
   }
 }
 
+// Body ------------------------------------------------- /
+.state--disableScroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+}
+
 // Subnavbar -------------------------------------------- /
 .subnavbar {
   // @include debug;
