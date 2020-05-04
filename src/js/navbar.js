@@ -27,6 +27,7 @@ const menuClass = menu.getAttribute('class');
 const searchInput = document.getElementsByClassName('search__input')[0];
 const subnavbar = document.getElementsByClassName('subnavbar')[0];
 const subnavbarWrapper = document.getElementsByClassName('subnavbar__wrapper')[0];
+const html = document.getElementsByTagName('html')[0];
 // something(true);
 
 let isMenuActive = false;
@@ -36,7 +37,8 @@ const setSubnavbar = enabled => {
     // Set menu icon to active
     menu.setAttribute('class', `${menuClass} is-active`);
     // Hide body scrollbar
-    body.style.position = 'relative';
+    // body.style.position = 'relative';
+    html.style.overflowY = 'hidden';
     body.style.overflowY = 'hidden';
 
     subnavbar.style.top = '100%';
@@ -45,7 +47,8 @@ const setSubnavbar = enabled => {
     // Set menu icon to default state
     menu.setAttribute('class', menuClass);
     // Set body scrollbar to initial state
-    body.style.position = null;
+    // body.style.position = null;
+    html.style.overflowY = null;
     body.style.overflowY = null;
 
     subnavbar.style.top = `-100vh`;
