@@ -76,7 +76,7 @@ window.addEventListener('resize', () => {
 
 // Add box shadow when scrolled down from initial position
 window.addEventListener('scroll', () => {
-  window.pageYOffset > 8 ?
+  window.pageYOffset > 8 && !isMenuActive ?
     navbarMain.style.boxShadow = '0 0 1px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04)' :
     navbarMain.style.boxShadow = 'none';
 });
