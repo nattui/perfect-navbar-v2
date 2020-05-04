@@ -235,7 +235,7 @@
 }
 
 // Media Queries ---------------------------------------- /
-@media only screen and (max-width: 725px) {
+@media only screen and (max-width: 800px) {
   .navbar {
     &__link {
       display: none;
@@ -247,45 +247,31 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 500px) {
   .navbar__login {
     display: none;
   }
 }
 
-@media only screen and (max-width: 350px) {
-  .navbar__logotype {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 280px) {
+@media only screen and (max-width: 400px) {
   .navbar__signup {
     display: none;
   }
 }
 
-@media only screen and (max-width: 200px) {
+@media only screen and (max-width: 300px) {
+  .navbar__logotype {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 250px) {
   .navbar__search {
     display: none;
   }
 }
 
-// @media only screen and (max-height: 364px) {
-//   .subnavbar {
-//     &__login {
-//       position: initial;
-//       width: initial;
-//     }
-
-//     &__signup {
-//       position: initial;
-//       width: initial;
-//     }
-//   }
-// }
-
-// // Search ----------------------------------------------- /
+// Search ----------------------------------------------- /
 .search {
   // @include debug;
   @include center;
