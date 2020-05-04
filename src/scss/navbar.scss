@@ -254,8 +254,14 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .navbar__signup {
-    display: none;
+  .navbar {
+    &__logotype {
+      display: none;
+    }
+
+    &__signup {
+      display: none;
+    }
   }
 }
 
