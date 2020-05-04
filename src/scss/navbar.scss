@@ -164,18 +164,11 @@
   }
 }
 
-// Body ------------------------------------------------- /
-.state--disableScroll {
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-}
-
 // Subnavbar -------------------------------------------- /
 .subnavbar {
   // @include debug;
   @include center-horizontal;
   @include position-absolute-top(-100vh);
-  -webkit-overflow-scrolling: touch;
   background-color: #ffffff;
   border-top: 1px solid $np-gray-2;
   height: 100vh;
