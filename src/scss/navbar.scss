@@ -167,7 +167,7 @@
 // Disable scroll when subnavbar is open
 .state--disableScroll {
   -webkit-overflow-scrolling: auto;
-  overflow: hidden;
+  overflow-y: hidden;
   overscroll-behavior: none;
   touch-action: none;
 }
