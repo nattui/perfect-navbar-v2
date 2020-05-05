@@ -1,13 +1,18 @@
 console.log('navbar.js is loaded...');
 
+// TODO: clean up variables
+
 // Checking whether to add margin top to body
 const navbarFixed = document.getElementsByClassName('navbar--fixed')[0];
 const navbarBanner = document.getElementsByClassName('navbar__banner')[0];
 const navbarMain = document.getElementsByClassName('navbar__main')[0];
+const subnavbarWrapper = document.getElementsByClassName('subnavbar__wrapper')[0];
 let navbarHeight = 0;
 navbarBanner ? navbarHeight = navbarBanner.offsetHeight + navbarMain.offsetHeight : navbarMain.offsetHeight;
 const body = document.getElementsByTagName('body')[0];
+console.log('navbar height:', navbarHeight);
 if (navbarFixed) body.style.marginTop = `${navbarHeight}px`;
+subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
 
 const something = (state) => {
   for (let i = 0; i < subnavbar.children.length; i++) {
@@ -26,7 +31,6 @@ const menu = document.getElementsByClassName('navbar__menu')[0];
 const menuClass = menu.getAttribute('class');
 const searchInput = document.getElementsByClassName('search__input')[0];
 const subnavbar = document.getElementsByClassName('subnavbar')[0];
-const subnavbarWrapper = document.getElementsByClassName('subnavbar__wrapper')[0];
 const html = document.getElementsByTagName('html')[0];
 // something(true);
 
@@ -66,6 +70,7 @@ window.addEventListener('resize', () => {
   // If navbar banner exist, adjust body margin top
   navbarBanner ? navbarHeight = navbarBanner.offsetHeight + navbarMain.offsetHeight : navbarMain.offsetHeight;
   body.style.marginTop = `${navbarHeight}px`;
+  subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
 
   // If resize x, turn off subnavbar
   if (windowWidth !== window.innerWidth) {
