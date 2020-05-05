@@ -43,6 +43,7 @@ ul {
 
 // Default font
 body {
+  -webkit-text-size-adjust: none; // Disable Safari iOS text size adjust
   font-family: Jost, -apple-system, sans-serif;
 }
 
