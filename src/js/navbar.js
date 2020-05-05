@@ -10,7 +10,7 @@ const subnavbarWrapper = document.getElementsByClassName('subnavbar__wrapper')[0
 let navbarHeight = 0;
 navbarBanner ? navbarHeight = navbarBanner.offsetHeight + navbarMain.offsetHeight : navbarMain.offsetHeight;
 const body = document.getElementsByTagName('body')[0];
-console.log('navbar height:', navbarHeight);
+// console.log('navbar height:', navbarHeight);
 if (navbarFixed) body.style.marginTop = `${navbarHeight}px`;
 subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
 
