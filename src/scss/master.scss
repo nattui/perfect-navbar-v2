@@ -8,14 +8,14 @@
 @import "colors";
 
 // Base ------------------------------------------------- /
-body {
-  height: 1400px;
-}
-
 .main {
   // @include debug;
   padding: 16px;
   // margin: 16px;
+  & > h1:first-of-type {
+    font-weight: bolder;
+    text-align: center;
+  }
 
   & > a {
     @include np-a(#000000, #000000);
@@ -23,8 +23,16 @@ body {
 }
 
 .colorBlock {
-  @include debug(black);
+  @include debug(#51cf66);
   margin-top: 16px;
   padding: 16px 0 16px 32px;
   overflow-x: hidden;
+
+  &:first-of-type {
+    @include debug($np-blue-5);
+  }
+
+  &:last-of-type {
+    @include debug($np-red-5);
+  }
 }
