@@ -37,9 +37,9 @@ const setSubnavbar = enabled => {
     // Set menu icon to active
     menu.setAttribute('class', `${menuClass} is-active`);
     // Hide body scrollbar
-    // body.style.position = 'relative';
+    body.style.overflowY = 'hidden';
     // html.setAttribute('class', 'state--disableScroll');
-    body.setAttribute('class', 'state--disableScroll');
+    // body.setAttribute('class', 'state--disableScroll');
 
     subnavbar.style.top = '100%';
     navbarMain.removeAttribute('style');
@@ -47,9 +47,9 @@ const setSubnavbar = enabled => {
     // Set menu icon to default state
     menu.setAttribute('class', menuClass);
     // Set body scrollbar to initial state
-    // body.style.position = null;
+    body.style.overflowY = null;
     // html.removeAttribute('class');
-    body.removeAttribute('class');
+    // body.removeAttribute('class');
 
     subnavbar.style.top = `-100vh`;
     window.pageYOffset > 8 ?
