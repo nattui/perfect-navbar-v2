@@ -45,6 +45,7 @@ const setSubnavbar = enabled => {
 
     subnavbar.style.top = '100%';
     navbarMain.removeAttribute('style');
+    isMenuActive = true;
   } else {
     // Set menu icon to default state
     menu.setAttribute('class', menuClass);
@@ -55,8 +56,8 @@ const setSubnavbar = enabled => {
     window.pageYOffset > 8 ?
       navbarMain.style.boxShadow = '0 0 1px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04)' :
       navbarMain.style.boxShadow = 'none';
+    isMenuActive = false;
   }
-  isMenuActive = !isMenuActive;
 }
 
 menu.addEventListener('click', () => isMenuActive ? setSubnavbar(false) : setSubnavbar(true));
