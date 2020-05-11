@@ -35,9 +35,9 @@ const html = document.getElementsByTagName('html')[0];
 // something(true);
 
 let isMenuActive = false;
-const setSubnavbar = enabled => {
+const setSubnavbar = state => {
   // window.scrollTo(0, 0);
-  if (enabled) {
+  if (state) {
     // Set menu icon to active
     menu.setAttribute('class', `${menuClass} is-active`);
     // Hide body scrollbar
@@ -60,7 +60,7 @@ const setSubnavbar = enabled => {
   }
 }
 
-menu.addEventListener('click', () => isMenuActive ? setSubnavbar(false) : setSubnavbar(true));
+menu.addEventListener('click', () => setSubnavbar(!isMenuActive));
 
 
 // Resized event listener
@@ -91,8 +91,8 @@ window.addEventListener('scroll', () => {
 
 // Searchbar
 const searchbar = document.getElementsByClassName('searchbar')[0];
-const searchButton = document.getElementsByClassName('navbar__search')[0];
 const searchbarInput = document.getElementsByClassName('searchbar__input')[0];
+const openSearchButton = document.getElementsByClassName('navbar__search')[0];
 const closeSearchButton = document.getElementsByClassName('searchbar__close')[0];
 
 // Set the searchbar
@@ -111,8 +111,7 @@ const setSearchbar = (state) => {
   }
 }
 
-searchButton.addEventListener('click', () => isSeachbarActive ? setSearchbar(false) : setSearchbar(true));
-
+openSearchButton.addEventListener('click', () => setSearchbar(true));
 closeSearchButton.addEventListener('click', () => setSearchbar(false));
 
 window.addEventListener('keydown', event => {
