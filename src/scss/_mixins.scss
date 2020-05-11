@@ -39,8 +39,9 @@
 }
 
 @mixin position-absolute-bottom($distance) {
-  position: absolute;
   bottom: $distance;
+  position: absolute;
+  right: 0;
 }
 
 @mixin transition($property) {

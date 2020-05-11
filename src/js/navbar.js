@@ -62,7 +62,7 @@ const setSubnavbar = enabled => {
 
 menu.addEventListener('click', () => isMenuActive ? setSubnavbar(false) : setSubnavbar(true));
 const search = document.getElementsByClassName('navbar__search')[0];
-search.addEventListener('click', () => isMenuActive ? setSubnavbar(false) : setSubnavbar(true));
+// search.addEventListener('click', () => isMenuActive ? setSubnavbar(false) : setSubnavbar(true));
 
 
 // Resized event listener
@@ -72,6 +72,12 @@ window.addEventListener('resize', () => {
   navbarBanner ? navbarHeight = navbarBanner.offsetHeight + navbarMain.offsetHeight : navbarMain.offsetHeight;
   body.style.paddingTop = `${navbarHeight}px`;
   subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
+
+  if (isSeachbarActive) {
+    setSearchbar(false);
+    // console.log('asdsadsasadsa');
+    // searchbar.style.top = `${navbarBanner.offsetHeight}px`;
+  }
 
   // If resize x, turn off subnavbar
   if (windowWidth !== window.innerWidth) {
@@ -87,3 +93,35 @@ window.addEventListener('scroll', () => {
     navbarMain.style.boxShadow = '0 0 1px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04)' :
     navbarMain.style.boxShadow = 'none';
 });
+
+
+// Searchbar
+const searchbar = document.getElementsByClassName('searchbar')[0];
+const searchbarInput = document.getElementsByClassName('searchbar__input')[0];
+const closeSearchButton = document.getElementsByClassName('searchbar__close')[0];
+
+// Set the searchbar
+let isSeachbarActive = false;
+const setSearchbar = (state) => {
+  if (state) {
+    navbarBanner ?
+      searchbar.style.top = `${navbarBanner.offsetHeight}px` :
+      searchbar.style.top = '44px';
+    searchbarInput.focus();
+    isSeachbarActive = true;
+  } else {
+    searchbar.style.top = '-64px';
+    isSeachbarActive = false;
+  }
+}
+
+search.addEventListener('click', () => {
+  if (isSeachbarActive) {
+    setSearchbar(false);
+  } else {
+    setSearchbar(true);
+    setSubnavbar(false);
+  }
+});
+
+closeSearchButton.addEventListener('click', () => setSearchbar(false));

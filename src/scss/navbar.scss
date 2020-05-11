@@ -319,3 +319,62 @@
     }
   }
 }
+
+.searchbar {
+  // @include debug;
+  @include center;
+  // @include position-absolute-top(44px);
+  @include position-absolute-top(-64px);
+  background-color: #ffffff;
+  height: 64px;
+  transition: top 200ms;
+  width: 100%;
+  z-index: 200;
+
+  &__wrapper {
+    // @include debug(blue);
+    @include center-vertical;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 16px;
+    position: relative;
+    width: 1024px;
+  }
+
+  &__input {
+    background-color: $np-gray-1;
+    border: 1px solid $np-gray-1;
+    border-radius: 4px;
+    font-family: Jost, -apple-system, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    outline: none;
+    padding: 0 40px;
+    width: 100%;
+
+    &:focus {
+      border: 1px solid $np-blue-5;
+    }
+  }
+
+  &__close {
+    // @include debug(blue);
+    cursor: pointer;
+    height: 40px;
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 40px;
+  }
+
+  &__icon {
+    // @include debug(blue);
+    height: 40px;
+    left: 0;
+    padding: 8px;
+    position: absolute;
+    top: 12px;
+    width: 40px;
+  }
+}
