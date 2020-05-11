@@ -245,6 +245,21 @@
 // Media Queries ---------------------------------------- /
 @media only screen and (max-width: 800px) {
   .navbar {
+    &__logomark {
+      max-height: 28px;
+      max-width: 24.73px;
+      min-height: 28px;
+      min-width: 24.73px;
+    }
+
+    &__logotype {
+      margin-left: 6px;
+      max-height: 19.49px;
+      max-width: 51.08px;
+      min-height: 19.49px;
+      min-width: 51.08px;
+    }
+
     &__link {
       display: none;
     }
@@ -262,14 +277,8 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .navbar {
-    &__logotype {
-      display: none;
-    }
-
-    &__signup {
-      display: none;
-    }
+  .navbar__signup {
+    display: none;
   }
 }
 
