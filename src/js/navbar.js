@@ -66,16 +66,16 @@ menu.addEventListener('click', () => isMenuActive ? setSubnavbar(false) : setSub
 // Resized event listener
 let windowWidth = window.innerWidth;
 window.addEventListener('resize', () => {
-  // If navbar banner exist, adjust body margin top
-  navbarBanner ? navbarHeight = navbarBanner.offsetHeight + navbarMain.offsetHeight : navbarMain.offsetHeight;
-  body.style.marginTop = `${navbarHeight}px`;
-  subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
-
   // If resize x, turn off subnavbar and searchbar
   if (windowWidth !== window.innerWidth) {
     windowWidth = window.innerWidth;
     setSubnavbar(false);
     setSearchbar(false);
+
+    // If navbar banner exist, adjust body margin top
+    navbarBanner ? navbarHeight = navbarBanner.offsetHeight + navbarMain.offsetHeight : navbarMain.offsetHeight;
+    body.style.marginTop = `${navbarHeight}px`;
+    subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
   }
 });
 
@@ -98,6 +98,7 @@ const closeSearchButton = document.getElementsByClassName('searchbar__close')[0]
 let isSeachbarActive = false;
 const setSearchbar = (state) => {
   if (state) {
+    setSubnavbar(false);
     navbarBanner ?
       searchbar.style.top = `${navbarBanner.offsetHeight}px` :
       searchbar.style.top = '44px';
@@ -109,13 +110,16 @@ const setSearchbar = (state) => {
   }
 }
 
-searchButton.addEventListener('click', () => {
-  if (isSeachbarActive) {
-    setSearchbar(false);
-  } else {
-    setSearchbar(true);
-    setSubnavbar(false);
-  }
-});
+searchButton.addEventListener('click', () => isSeachbarActive ? setSearchbar(false) : setSearchbar(true));
 
 closeSearchButton.addEventListener('click', () => setSearchbar(false));
+
+window.addEventListener('keydown', event => {
+  let key = event.key;
+  if (key === 's') {
+    setSearchbar(true);
+  } else if (key === 'm') {
+    setSearchbar(false);
+    setSubnavbar(true);
+  }
+}, { once: true });
