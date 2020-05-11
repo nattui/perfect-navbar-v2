@@ -293,7 +293,8 @@
   @include position-absolute-top(-64px);
   // background-color: #ffffff;
   height: 64px;
-  transition: top 200ms;
+  // transition: top 200ms;
+  transition: 1s;
   width: 100%;
   z-index: 200;
 
