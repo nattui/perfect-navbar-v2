@@ -73,16 +73,11 @@ window.addEventListener('resize', () => {
   body.style.paddingTop = `${navbarHeight}px`;
   subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
 
-  if (isSeachbarActive) {
-    setSearchbar(false);
-    // console.log('asdsadsasadsa');
-    // searchbar.style.top = `${navbarBanner.offsetHeight}px`;
-  }
-
-  // If resize x, turn off subnavbar
+  // If resize x, turn off subnavbar and searchbar
   if (windowWidth !== window.innerWidth) {
     windowWidth = window.innerWidth;
     setSubnavbar(false);
+    setSearchbar(false);
   }
 });
 
