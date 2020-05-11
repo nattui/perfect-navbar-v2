@@ -81,6 +81,12 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+// Form ------------------------------------------------- /
+// Disable top inner shadow for iOS Safari
+input {
+  -webkit-appearance: none;
+}
+
 // Selection -------------------------------------------- /
 // Change selection color
 ::selection {
