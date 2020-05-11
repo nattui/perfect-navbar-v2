@@ -11,7 +11,7 @@ let navbarHeight = 0;
 navbarBanner ? navbarHeight = navbarBanner.offsetHeight + navbarMain.offsetHeight : navbarMain.offsetHeight;
 const body = document.getElementsByTagName('body')[0];
 // console.log('navbar height:', navbarHeight);
-if (navbarFixed) body.style.marginTop = `${navbarHeight}px`;
+if (navbarFixed) body.style.paddingTop = `${navbarHeight}px`;
 subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
 
 const something = (state) => {
@@ -70,7 +70,7 @@ let windowWidth = window.innerWidth;
 window.addEventListener('resize', () => {
   // If navbar banner exist, adjust body margin top
   navbarBanner ? navbarHeight = navbarBanner.offsetHeight + navbarMain.offsetHeight : navbarMain.offsetHeight;
-  body.style.marginTop = `${navbarHeight}px`;
+  body.style.paddingTop = `${navbarHeight}px`;
   subnavbarWrapper.style.height = `calc(100% - ${navbarHeight}px)`;
 
   // If resize x, turn off subnavbar
