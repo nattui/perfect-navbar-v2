@@ -342,14 +342,15 @@
   }
 
   &__input {
-    background-color: $np-gray-1;
-    border: 1px solid $np-gray-1;
+    background-color: $np-gray-0;
+    border: 1px solid $np-gray-3;
     border-radius: 4px;
     font-family: Jost, -apple-system, sans-serif;
     font-size: 16px;
     height: 40px;
     outline: none;
     padding: 0 40px;
+    transition: border 200ms;
     width: 100%;
 
     &:focus {
