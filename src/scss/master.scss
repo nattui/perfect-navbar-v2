@@ -10,26 +10,34 @@
 // Base ------------------------------------------------- /
 .main {
   // @include debug;
-  padding: 16px;
-  // margin: 16px;
-  & > h1:first-of-type {
-    font-weight: bolder;
-    text-align: center;
-  }
+  @include center;
 
-  & > a {
-    @include np-a(#000000, #000000);
+  &__wrapper {
+    margin: 0 16px;
+    width: 1024px;
+
+    & > h1:first-of-type {
+      font-size: 80px;
+      font-weight: bolder;
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    & > a {
+      @include np-a(#000000, #000000);
+    }
   }
 }
 
 .colorBlock {
   @include debug(#51cf66);
-  margin-top: 16px;
+  margin-bottom: 16px;
   padding: 16px 0 16px 32px;
   overflow-x: hidden;
 
   &:first-of-type {
     @include debug($np-blue-5);
+    margin-top: 16px;
   }
 
   &:last-of-type {
