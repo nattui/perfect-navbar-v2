@@ -61,8 +61,6 @@ const setSubnavbar = enabled => {
 }
 
 menu.addEventListener('click', () => isMenuActive ? setSubnavbar(false) : setSubnavbar(true));
-const search = document.getElementsByClassName('navbar__search')[0];
-// search.addEventListener('click', () => isMenuActive ? setSubnavbar(false) : setSubnavbar(true));
 
 
 // Resized event listener
@@ -92,6 +90,7 @@ window.addEventListener('scroll', () => {
 
 // Searchbar
 const searchbar = document.getElementsByClassName('searchbar')[0];
+const searchButton = document.getElementsByClassName('navbar__search')[0];
 const searchbarInput = document.getElementsByClassName('searchbar__input')[0];
 const closeSearchButton = document.getElementsByClassName('searchbar__close')[0];
 
@@ -110,7 +109,7 @@ const setSearchbar = (state) => {
   }
 }
 
-search.addEventListener('click', () => {
+searchButton.addEventListener('click', () => {
   if (isSeachbarActive) {
     setSearchbar(false);
   } else {

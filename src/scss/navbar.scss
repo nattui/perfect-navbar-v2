@@ -286,44 +286,10 @@
   }
 }
 
-// Search ----------------------------------------------- /
-.search {
-  // @include debug;
-  @include center;
-  border-bottom: 1px solid $np-gray-2;
-  border-top: 1px solid $np-gray-2;
-  height: 80px;
-  padding: 0 16px;
-  position: relative;
-  width: 100%;
-
-  &__icon {
-    left: 24px;
-    position: absolute;
-    top: 28px;
-  }
-
-  &__input {
-    background-color: $np-gray-1;
-    border: none;
-    border-radius: 4px;
-    font-family: Jost, -apple-system, sans-serif;
-    font-size: 16px;
-    height: 40px;
-    padding: 0 12px 0 40px;
-    outline: none;
-    width: inherit;
-
-    &:focus {
-      border: 1px solid $np-blue-5;
-    }
-  }
-}
-
+// Searchbar -------------------------------------------- /
 .searchbar {
   // @include debug;
   @include center;
-  // @include position-absolute-top(44px);
   @include position-absolute-top(-64px);
   background-color: #ffffff;
   height: 64px;
@@ -339,6 +305,16 @@
     margin: 0 16px;
     position: relative;
     width: 1024px;
+  }
+
+  &__icon {
+    // @include debug(blue);
+    height: 40px;
+    left: 0;
+    padding: 8px;
+    position: absolute;
+    top: 12px;
+    width: 40px;
   }
 
   &__input {
@@ -360,21 +336,13 @@
 
   &__close {
     // @include debug(blue);
+    // @include transition-background;
+    border-radius: 4px;
     cursor: pointer;
     height: 40px;
-    padding: 16px;
+    padding: 12px;
     position: absolute;
     right: 0;
-    top: 12px;
-    width: 40px;
-  }
-
-  &__icon {
-    // @include debug(blue);
-    height: 40px;
-    left: 0;
-    padding: 8px;
-    position: absolute;
     top: 12px;
     width: 40px;
   }
