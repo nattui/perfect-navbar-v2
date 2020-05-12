@@ -334,6 +334,7 @@
   }
 
   &__icon {
+    user-select: none;
     // @include debug(blue);
     height: 40px;
     left: 0;
@@ -361,6 +362,7 @@
   }
 
   &__close {
+    user-select: none;
     // @include debug(blue);
     // @include transition-background;
     border-radius: 4px;
