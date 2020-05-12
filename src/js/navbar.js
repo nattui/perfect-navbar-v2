@@ -1,6 +1,7 @@
 console.log('navbar.js is loaded...');
 
 // TODO: clean up variables
+// Test Deployment
 
 // Checking whether to add margin top to body
 const navbarFixed = document.getElementsByClassName('navbar--fixed')[0];
