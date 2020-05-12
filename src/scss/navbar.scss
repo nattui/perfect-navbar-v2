@@ -43,6 +43,31 @@
         @include np-a(#ffffff, #ffffff);
       }
     }
+
+    & > button {
+      // @include debug(blue);
+      @include center;
+      background: none;
+      border: 1px solid #ffffff00;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-left: 8px;
+      min-height: 20px;
+      min-width: 20px;
+      outline: none;
+      padding: 0;
+      transition: background-color 200ms, border 200ms;
+
+      &:hover {
+        background-color: darken($np-primary, 8%);
+        border: 1px solid lighten($np-primary, 16%);
+      }
+
+      &:focus {
+        background-color: darken($np-primary, 16%);
+        border: 1px solid #ffffff;
+      }
+    }
   }
 
   // Main ----------------------------------------------- /
@@ -182,7 +207,7 @@
 
   &__wrapper {
     // @include debug(blue);
-    height: calc(100% - 108px);
+    // height: calc(100% - 108px);
     max-width: calc(1024px + 32px);
     overflow-y: auto;
     width: 100%;
