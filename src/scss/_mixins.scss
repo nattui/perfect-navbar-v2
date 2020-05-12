@@ -73,6 +73,7 @@
   }
 }
 
+// NPath: Button primary transition
 @mixin transition-button-primary($color) {
   outline: none;
   transition: background-color 0.2s;
@@ -87,6 +88,7 @@
   }
 }
 
+// NPath: Button secondary transition
 @mixin transition-button-secondary($color) {
   outline: none;
   transition: background-color 0.2s;
@@ -101,6 +103,7 @@
   }
 }
 
+// NPath: anchor with underline
 @mixin np-a($textColor: $np-gray-7, $lineColor: $np-primary) {
   box-shadow: inset 0px -1px rgba($lineColor, 0.32);
   color: $textColor;
@@ -120,4 +123,10 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@mixin disabled {
+  cursor: not-allowed;
+  display: none;
+  opacity: 0.5;
 }

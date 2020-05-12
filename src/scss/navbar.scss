@@ -6,7 +6,7 @@
 @import "mixins";
 @import "colors";
 @import "font";
-@import "setting";
+@import "hamburgers-setting";
 @import "~hamburgers/_sass/hamburgers/hamburgers";
 
 // Base ------------------------------------------------- /
@@ -184,12 +184,67 @@
   }
 }
 
-// Disable scroll when subnavbar is open
-.state--disableScroll {
-  // -webkit-overflow-scrolling: auto;
-  overflow-y: hidden;
-  // overscroll-behavior: none;
-  // touch-action: none;
+// Searchbar -------------------------------------------- /
+.searchbar {
+  // @include debug;
+  @include center;
+  @include position-absolute-top(-64px);
+  @include user-select;
+  // background-color: #ffffff;
+  height: 64px;
+  transition: top 200ms;
+  width: 100%;
+  z-index: 200;
+
+  &__wrapper {
+    // @include debug(blue);
+    @include center-vertical;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 16px;
+    position: relative;
+    width: 1024px;
+  }
+
+  &__icon {
+    // @include debug(blue);
+    height: 40px;
+    left: 0;
+    padding: 8px;
+    position: absolute;
+    top: 12px;
+    width: 40px;
+  }
+
+  &__input {
+    background-color: $np-gray-0;
+    border: 1px solid $np-gray-3;
+    border-radius: 4px;
+    font-family: Jost, -apple-system, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    outline: none;
+    padding: 0 40px;
+    transition: border 200ms;
+    width: 100%;
+
+    &:focus {
+      border: 1px solid $np-blue-5;
+    }
+  }
+
+  &__close {
+    // @include debug(blue);
+    // @include transition-background;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 40px;
+  }
 }
 
 // Subnavbar -------------------------------------------- /
@@ -262,6 +317,14 @@
   }
 }
 
+// Disable scroll when subnavbar is open
+.state--disableScroll {
+  // -webkit-overflow-scrolling: auto;
+  overflow-y: hidden;
+  // overscroll-behavior: none;
+  // touch-action: none;
+}
+
 // Media Queries ---------------------------------------- /
 @media only screen and (max-width: 800px) {
   .navbar {
@@ -310,65 +373,7 @@
   }
 }
 
-// Searchbar -------------------------------------------- /
-.searchbar {
-  // @include debug;
-  @include center;
-  @include position-absolute-top(-64px);
-  @include user-select;
-  // background-color: #ffffff;
-  height: 64px;
-  transition: top 200ms;
-  width: 100%;
-  z-index: 200;
-
-  &__wrapper {
-    // @include debug(blue);
-    @include center-vertical;
-    height: 100%;
-    justify-content: space-between;
-    margin: 0 16px;
-    position: relative;
-    width: 1024px;
-  }
-
-  &__icon {
-    // @include debug(blue);
-    height: 40px;
-    left: 0;
-    padding: 8px;
-    position: absolute;
-    top: 12px;
-    width: 40px;
-  }
-
-  &__input {
-    background-color: $np-gray-0;
-    border: 1px solid $np-gray-3;
-    border-radius: 4px;
-    font-family: Jost, -apple-system, sans-serif;
-    font-size: 16px;
-    height: 40px;
-    outline: none;
-    padding: 0 40px;
-    transition: border 200ms;
-    width: 100%;
-
-    &:focus {
-      border: 1px solid $np-blue-5;
-    }
-  }
-
-  &__close {
-    // @include debug(blue);
-    // @include transition-background;
-    border-radius: 4px;
-    cursor: pointer;
-    height: 40px;
-    padding: 12px;
-    position: absolute;
-    right: 0;
-    top: 12px;
-    width: 40px;
-  }
+// Extra
+.disabled {
+  @include disabled;
 }

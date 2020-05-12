@@ -24,7 +24,7 @@
     }
 
     & > a {
-      @include np-a(#000000, #000000);
+      @include np-a(#000000, $np-gray-7);
     }
   }
 }
