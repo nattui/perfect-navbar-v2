@@ -78,7 +78,7 @@
     height: 64px;
     overflow-x: hidden;
     width: 100%;
-    transition: box-shadow 200ms;
+    transition: box-shadow 200ms, height 200ms;
     z-index: 100;
   }
 
@@ -328,6 +328,10 @@
 // Media Queries ---------------------------------------- /
 @media only screen and (max-width: 800px) {
   .navbar {
+    &__main {
+      height: 54px;
+    }
+
     &__logomark {
       height: 28px;
       width: 24.73px;
