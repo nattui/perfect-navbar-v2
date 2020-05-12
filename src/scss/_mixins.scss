@@ -114,3 +114,10 @@
     box-shadow: inset 0px -8px rgba($lineColor, 0.32);
   }
 }
+
+@mixin user-select {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

@@ -74,11 +74,10 @@
   &__main {
     // @include debug(blue);
     @include center;
+    @include user-select;
     background-color: #ffffff;
     height: 64px;
     overflow-x: hidden;
-    -moz-user-select: none;
-    user-select: none;
     width: 100%;
     transition: box-shadow 200ms;
     z-index: 100;
@@ -199,11 +198,11 @@
   // @include debug;
   @include center-horizontal;
   @include position-absolute-top(-100vh);
+  @include user-select;
   background-color: #ffffff;
   border-top: 1px solid $np-gray-2;
   height: 100vh;
   transition: top 200ms;
-  user-select: none;
   width: 100%;
 
   &__wrapper {
@@ -317,10 +316,10 @@
   // @include debug;
   @include center;
   @include position-absolute-top(-64px);
+  @include user-select;
   // background-color: #ffffff;
   height: 64px;
   transition: top 200ms;
-  user-select: none;
   width: 100%;
   z-index: 200;
 
