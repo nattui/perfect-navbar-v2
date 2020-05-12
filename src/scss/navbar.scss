@@ -45,10 +45,9 @@
     }
 
     & > button {
-      // @include debug(blue);
-      @include center;
+      @include debug(blue);
       background: none;
-      border: 1px solid #ffffff00;
+      border: none;
       border-radius: 50%;
       cursor: pointer;
       margin-left: 8px;
@@ -56,16 +55,16 @@
       min-width: 20px;
       outline: none;
       padding: 0;
-      transition: background-color 200ms, border 200ms;
+      transition: background-color 200ms, box-shadow 200ms;
 
       &:hover {
         background-color: darken($np-primary, 8%);
-        border: 1px solid lighten($np-primary, 16%);
+        box-shadow: 0 0 0 1px lighten($np-primary, 16%);
       }
 
       &:focus {
         background-color: darken($np-primary, 16%);
-        border: 1px solid #ffffff;
+        box-shadow: 0 0 0 1px #ffffff;
       }
     }
   }
