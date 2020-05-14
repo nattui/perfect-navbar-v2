@@ -108,8 +108,10 @@
   &__logomark {
     // @include debug(green);
     @include center-vertical;
-    height: 32px;
-    width: 28.26px;
+    // height: 32px;
+    // width: 28.26px;
+    height: 28px;
+    width: 28px;
   }
 
   &__logotype {
@@ -329,8 +331,10 @@
 @media only screen and (max-width: 800px) {
   .navbar {
     &__logomark {
-      height: 28px;
-      width: 24.73px;
+      // height: 28px;
+      // width: 24.73px;
+      height: 24px;
+      width: 24px;
     }
 
     &__logotype {
