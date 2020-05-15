@@ -39,7 +39,6 @@ const resetBodyMargins = () => {
 resetBodyMargins();
 
 
-
 let isSubnavbarActive = false;
 const setSubnavbar = state => {
   if (state) {
