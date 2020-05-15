@@ -112,6 +112,7 @@
     // width: 28.26px;
     height: 28px;
     width: 28px;
+    transition: height 200ms ease-in-out, width 200ms ease-in-out;
   }
 
   &__logotype {
@@ -120,6 +121,7 @@
     margin-left: 8px;
     height: 22.27px;
     width: 58.37px;
+    transition: height 200ms, margin-left 200ms, width 200ms;
   }
 
   &__links {
